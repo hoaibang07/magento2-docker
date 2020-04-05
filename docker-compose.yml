@@ -3,13 +3,13 @@ services:
   php:
     build: './services/php/'
     volumes:
-      - ./public_html:/var/www/html
+      - ./magento-src:/var/www/html
     networks:
       - backend
   apache24:
     build: './services/apache/'
     volumes:
-      - ./public_html:/var/www/html
+      - ./magento-src:/var/www/html
     ports:
       - '80:80'
       - '443:443'
