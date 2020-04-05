@@ -69,3 +69,4 @@ atlassian*
 .DS_Store
 
 /.github/*
+/auth.json
