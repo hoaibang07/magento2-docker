@@ -1,0 +1,32 @@
+version: "3.2"
+services:
+  php:
+    build: './services/php/'
+    volumes:
+      - ./public_html:/var/www/html
+    networks:
+      - backend
+  apache24:
+    build: './services/apache/'
+    volumes:
+      - ./public_html:/var/www/html
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - php
+      - mysql
+    extra_hosts:
+      - "mage234.local:127.0.0.1"
+    networks:
+      - backend
+      - frontend
+  mysql:
+    image: mysql:5.6.40
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+networks:
+  backend:
+  frontend:
