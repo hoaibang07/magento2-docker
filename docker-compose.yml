@@ -22,11 +22,11 @@ services:
       - backend
       - frontend
   mysql:
-    image: mysql:5.6.40
+    image: mysql:5.7
     networks:
       - backend
     environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_ROOT_PASSWORD=root
 networks:
   backend:
   frontend:
