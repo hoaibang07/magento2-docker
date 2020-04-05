@@ -1,9 +1,9 @@
 <html>
     <head>
-        <title>This is docker demo</title>
+        <title>This is docker for Magento2</title>
     </head>
     <body>
-        <h1>Hello Cloudreach!</h1>
+        <h1>Hello Magento 2!</h1>
         <h4>Attempting MySQL connection from php...</h4>
         <?php
         $host = 'mysql';
